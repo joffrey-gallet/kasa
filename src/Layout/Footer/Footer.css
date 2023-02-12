@@ -1,0 +1,21 @@
+.footer {
+  width: 100%;
+  height: 220px;
+  background-color: black;
+  margin-top: 100px;
+  color: white;
+  text-align: center;
+}
+
+.footer-logo {
+  filter: brightness(10);
+  margin-top: 50px;
+  width: 150px;
+}
+
+.footer p {
+  font-family: "Montserrat", "sans-serif";
+  font-size: 30px;
+  font-weight: lighter;
+  margin: 40px;
+}

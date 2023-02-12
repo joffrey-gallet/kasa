@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  height: 150px;
+}
+
+.logo-kasa {
+  position: absolute;
+  left: 111px;
+  top: 20px;
+  width: 200px;
+}
+
+nav {
+  position: absolute;
+  right: 15px;
+  top: 40px;
+}
+
+nav a {
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  color: #ff6060;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav a:hover {
+  text-decoration: underline;
+}

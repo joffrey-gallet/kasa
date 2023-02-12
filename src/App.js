@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home/Home";
+import About from "./components/Pages/About";
+import Lodgings from "./components/Pages/Lodgings";
+import Err404 from "./components/Pages/Err404/Err404";
+import Footer from "./Layout/Header/Header";
+import Header from "./Layout/Footer/Footer";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/logements" element={<Lodgings />} />
+        <Route path="/apropos" element={<About />} />
 
-export default App;
+        <Route path="*" element={<Err404 />} />
+
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  </React.StrictMode>
+);
