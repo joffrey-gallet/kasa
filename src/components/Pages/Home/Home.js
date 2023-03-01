@@ -11,12 +11,12 @@ const Home = () => {
                 <Banner />
             </div>
             <main className="container">
-                {data.map((data) => (
+                {data.map((item) => (
                     <Card
-                        key={data.id}
-                        title={data.title}
-                        cover={data.cover}
-                        id={`/lodgings/${data.id}`}
+                        key={item.id}
+                        title={item.title}
+                        cover={item.cover}
+                        id={`/lodgings/${item.id}`}
                     />
                 ))}
             </main>
